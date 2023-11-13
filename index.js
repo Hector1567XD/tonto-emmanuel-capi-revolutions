@@ -1,10 +1,10 @@
 import { MongoClient } from 'mongodb';
-import AuthorsRepository from './authors.js';
-import AuthorActivitiesRepository from './author-activities.js';
-import AuthorStagesRepository from './author-stages.js';
-import WorksRepository from './works.js';
-import PublicationsRepository from './editions.js';
-import MultimediaRepository from './multimedia.js';
+import AuthorsRepository from './entities/authors.js';
+import AuthorActivitiesRepository from './entities/author-activities.js';
+import AuthorStagesRepository from './entities/author-stages.js';
+import WorksRepository from './entities/works.js';
+import PublicationsRepository from './entities/editions.js';
+import MultimediaRepository from './entities/multimedia.js';
 
 const mongoURL = 'mongodb://localhost:27017';
 const dbName = 'miBaseDeDatos2';
