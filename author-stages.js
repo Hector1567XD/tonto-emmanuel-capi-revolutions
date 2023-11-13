@@ -48,7 +48,5 @@ export default class AuthorStagesRepository {
               },
           },
       });
-
-    await this.db.collection(this.collectionName).createIndex({ etapa: 1 }, { unique: true });
   }
 }

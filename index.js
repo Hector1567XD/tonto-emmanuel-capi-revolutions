@@ -4,6 +4,7 @@ import AuthorActivitiesRepository from './author-activities.js';
 import AuthorStagesRepository from './author-stages.js';
 import WorksRepository from './works.js';
 import PublicationsRepository from './editions.js';
+import MultimediaRepository from './multimedia.js';
 
 const mongoURL = 'mongodb://localhost:27017';
 const dbName = 'miBaseDeDatos2';
@@ -30,6 +31,9 @@ async function main() {
     const editions = new PublicationsRepository(db, 'editions');
     await editions.createCollection();
 
+    const multimedia = new MultimediaRepository(db, 'multimedia');
+    await multimedia.createCollection();
+      
   } finally {
     await client.close();
   }

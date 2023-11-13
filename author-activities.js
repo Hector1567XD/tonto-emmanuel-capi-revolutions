@@ -64,7 +64,5 @@ export default class AuthorActivitiesRepository {
               },
           },
       });
-
-      await this.db.collection(this.collectionName).createIndex({ actividad: 1 }, { unique: true });
   }
 }

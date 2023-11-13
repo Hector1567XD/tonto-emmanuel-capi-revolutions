@@ -87,7 +87,5 @@ export default class AuthorsRepository {
               },
           },
       });
-    
-    await this.db.collection(this.collectionName).createIndex({ nombre: 1 }, { unique: true });
   }
 }

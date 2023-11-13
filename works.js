@@ -72,7 +72,5 @@ export default class WorksRepository {
               },
           },
       });
-
-      await this.db.collection(this.collectionName).createIndex({ titulo: 1 }, { unique: true });
   }
 }

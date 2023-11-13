@@ -56,7 +56,5 @@ export default class PublicationsRepository {
               },
           },
       });
-
-      await this.db.collection(this.collectionName).createIndex({ titulo: 1 }, { unique: true });
   }
 }
