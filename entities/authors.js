@@ -1,3 +1,18 @@
+const PERSONA_SCHEMA = {
+    bsonType: 'object',
+    required: ['nombre', 'nacimiento'],
+    properties: {
+        nombre: {
+            bsonType: 'string',
+            description: 'debe ser una cadena y es obligatorio',
+        },
+        nacimiento: {
+            bsonType: 'date',
+            description: 'debe ser una fecha y es obligatorio',
+        },
+    },
+}
+
 export default class AuthorsRepository {
 
   constructor(db, collectionName) {
@@ -34,54 +49,15 @@ export default class AuthorsRepository {
                       },
                       padres: {
                           bsonType: 'array',
-                          items: {
-                              bsonType: 'object',
-                              required: ['nombre', 'nacimiento'],
-                              properties: {
-                                  nombre: {
-                                      bsonType: 'string',
-                                      description: 'debe ser una cadena y es obligatorio',
-                                  },
-                                  nacimiento: {
-                                      bsonType: 'date',
-                                      description: 'debe ser una fecha y es obligatorio',
-                                  },
-                              },
-                          },
+                          items: PERSONA_SCHEMA,
                       },
                       hijos: {
                           bsonType: 'array',
-                          items: {
-                              bsonType: 'object',
-                              required: ['nombre', 'nacimiento'],
-                              properties: {
-                                  nombre: {
-                                      bsonType: 'string',
-                                      description: 'debe ser una cadena y es obligatorio',
-                                  },
-                                  nacimiento: {
-                                      bsonType: 'date',
-                                      description: 'debe ser una fecha y es obligatorio',
-                                  },
-                              },
-                          },
+                          items: PERSONA_SCHEMA,
                       },
                       hermanos: {
                           bsonType: 'array',
-                          items: {
-                              bsonType: 'object',
-                              required: ['nombre', 'nacimiento'],
-                              properties: {
-                                  nombre: {
-                                      bsonType: 'string',
-                                      description: 'debe ser una cadena y es obligatorio',
-                                  },
-                                  nacimiento: {
-                                      bsonType: 'date',
-                                      description: 'debe ser una fecha y es obligatorio',
-                                  },
-                              },
-                          },
+                          items: PERSONA_SCHEMA,
                       },
                   },
               },
